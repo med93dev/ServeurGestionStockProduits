@@ -10,3 +10,4 @@ node {
     stage("Runing unit tests") {
       sh "./mvnw test -Punit"
     }
+    }
