@@ -12,4 +12,8 @@ node {
       sh "chmod +x -R ${env.WORKSPACE}"
       sh "./mvnw test -Punit"
     }
+    stage('Execute Maven') {
+      sh "chmod +x -R ${env.WORKSPACE}"  
+      sh "./mvnw package"            
+        }
     }
