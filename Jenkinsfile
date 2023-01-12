@@ -24,10 +24,10 @@ node {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'docker_hub', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u Shadow112233 -p ${dockerhubpwd}'
+                   sh 'docker login -u shadow112233 -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push Shadow112233/serveur-produits'
+                   sh 'docker push shadow112233/serveur-produits'
                 }
             }
         }
