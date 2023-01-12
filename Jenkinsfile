@@ -13,12 +13,10 @@ node {
       sh "./mvnw test -Punit"
     }
   
-    stage('Execute Maven') {
-      sh "chmod +x -R ${env.WORKSPACE}"  
-      sh "./mvnw package"            
-        }
+    
   stage('Build docker image'){
-
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
       sh 'docker build -t Shadow112233/ServeurGestionStockProduits .'
         }
   
