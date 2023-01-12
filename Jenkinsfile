@@ -17,7 +17,7 @@ node {
   stage('Build docker image'){
         def dockerHome = tool 'myDocker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
-      sh 'docker build -t Shadow112233/serveur-produits .'
+      sh 'docker build -t shadow112233/serveur-produits .'
         }
   
         stage('Push image to Hub'){
