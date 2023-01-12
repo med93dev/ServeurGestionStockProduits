@@ -25,7 +25,7 @@ node {
         stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'docker_hub, variable: 'dockerhubpwd')]) {
+                   withCredentials([string(credentialsId: 'docker_hub', variable: 'dockerhubpwd')]) {
                    sh 'docker login -u Shadow112233 -p ${dockerhubpwd}'
 
 }
